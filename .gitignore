@@ -55,6 +55,7 @@ Content/StarterContent/
 Content/Megascans/*
 Content/MSPresets/*
 Content/Characters/
+Content/ClassRoomAssets/*
 
 
 # Recursos crudos que no queremos o no podemos publicar en un repositorio público y con poco espacio (sean nuestros o ThirdParty)

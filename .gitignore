@@ -57,7 +57,7 @@ Content/MSPresets/*
 Content/Characters/
 Content/ClassRoomAssets/*
 Content/LivingRoomAssets/*
-
+Content/Pack_Simple_Particle_Burst/*
 
 # Recursos crudos que no queremos o no podemos publicar en un repositorio público y con poco espacio (sean nuestros o ThirdParty)
 #    Antes se hablaba de recursos precompilados y ponía: SourceArt/**/*.png   SourceArt/**/*.tga

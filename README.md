@@ -30,6 +30,24 @@ Es por ello que, finalmente, se incluyen los siguientes elementos claves para el
 El diseño tiene las siguientes secciones:
 ### TODO ÍNDICE DE LAS SECCIONES DE DISEÑO
 
+### Diseño preliminar
+A continuación, se muestra el diseño inicial de los diferentes mapas e interfaces del juego.
+
+#### Escenario clase
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1327660171115237438/PXL_20250111_152508351.jpg?ex=6783df63&is=67828de3&hm=d73ab8e51b2e55dd2f3669710cff9484b8ebc46851beb29fd553f22fd3511c8a" alt="Imagen" style="height: 300px;">
+
+#### Escenario fiesta
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1327660174181138563/PXL_20250111_152528433.jpg?ex=6783df64&is=67828de4&hm=a99396c7216b4917ef0affcbe023ad9f6cc6911be27c65fdbcee50bea89cf22b&" alt="Imagen" style="height: 300px;">
+
+#### Escenario minijuego
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1327660173476499568/PXL_20250111_152613811.jpg?ex=6783df64&is=67828de4&hm=faf72dc5e34f65fda17819577f2ad0a71e49456dcbdb25d8904d4d5650ab1d96&" alt="Imagen" style="height: 300px;">
+
+#### Interfaz diálogo clase
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1327660171903635456/PXL_20250111_152515603.jpg?ex=6783df63&is=67828de3&hm=0208286ac76b948558179ec9be3d737528d95d3f8597b5b54b287e801961937e&" alt="Imagen" style="height: 300px;">
+
+#### Interfaz diálogo fiesta
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1327660172709072926/PXL_20250111_152535470.jpg?ex=6783df63&is=67828de3&hm=174306bef1c9229b4656577184462ab6cdab8d2e068fb556b5df879c4fa65f17&" alt="Imagen" style="height: 300px;">
+
 ### Estética
 Como bien se ha comentado en puntos anteriores, se va a poner especial enfásis en la estética de los mapas del aula del colegio y de la fiesta de cumpleaños.
 

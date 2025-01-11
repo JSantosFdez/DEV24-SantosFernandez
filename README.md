@@ -121,6 +121,47 @@ y aunque duela, seguiré adelante.
 Mi luz brillará, nadie la apagará,
 porque sé que algún día todo cambiará._
 
+### Dinámica
+La dinámica del juego consiste en ir completando los diferentes objetivos que se marcan al jugador. Desde el mapa de la clase se pone como objetivos el hablar con los diferentes personajes. El diálogo de estos personajes desemboca en un minijuego cuya dinámica es la de ir desde el punto inicial al punto final recogiendo un objeto sin tocar los enemigos. A pesar de esto no hay límite de tiempo ni penalización al morir más allá de, en el minijuego, ser teletransportado al punto inicial.
+
+A continuación se muestra un grafo de la dinámica del juego.
+```mermaid
+stateDiagram
+    [*] --> Inicio
+    Inicio --> Clase
+    Clase --> DiálogoClase
+    DiálogoClase --> Minijuego
+    Minijuego --> Victoria
+    Minijuego --> Muerte
+    Muerte --> Minijuego
+    Victoria --> DiálogoClase
+    DiálogoClase --> Clase
+    Clase --> Fiesta
+    Fiesta --> DiálogoFiesta
+    DiálogoFiesta --> Fiesta
+    DiálogoFiesta --> Fin
+```
+
+#### Objetivo
+El objetivo del juego es el de **invitar a tus compañeros** a la fiesta de cumpleaños y acabar celebrándola.
+
+No obstante, dentro de cada nivel se pueden observar diferentes objetivos.
+
+##### Objetivos clase
+En el mapa del aula, el objetivo principal es el de **invitar uno a uno** a tus compañeros de clase. Para lo cual deberás hablar con ellos en el orden correcto y terminar saliendo de clase para volver a casa una vez hayas invitado a todos tus compañeros.
+
+##### Objetivos minijuego
+Dentro de los diferentes minijuegos, el objetivo principal es el de **recoger la invitación** y acabar llevándosela al fantasma de fin de nivel (meta) sin chocar con los insultos (proyectiles) que lanzan los enemigos.
+Estos niveles representan una metáfora de que al invitar a los fantasmas se está enfrentando a sus miedos.
+
+##### Objetivos fiesta
+En el mapa de la casa, donde se celebra la **fiesta de cumpleaños** el objetivo es el de revisar los diferentes elementos que hay decorando la fiesta y así descubrir escenas del pasado del protagonista.
+
+#### Castigo
+En relación al objetivo principal no existe un castigo por fallar al completar las misiones. De hecho, al ser escenas de diálogo no existe posibilidad de fallo o equivocación.
+
+Dentro de los minijuegos sí que existe castigo por colisionar con los proyectiles enemigos. En este caso se devuelve al personaje a la posición de inicio del nivel desde donde deberá volver a intentarlo.
+
 ## Licencia
 Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.
 

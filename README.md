@@ -12,10 +12,22 @@ Para hacer uso de este proyecto, por limitación del tamaño permitido por GitHu
 
 
 ## Referencias
-Conectado
-El Viaje De Elisa
-School Of Empathy
-De Fobos y Deimos
-Gylt
-Happy
-Arbax
+- Conectado
+- El Viaje De Elisa
+- School Of Empathy
+- De Fobos y Deimos
+- Gylt
+- Happy
+- Arbax
+- Invisible
+- Wonder
+- SunoAI
+- ChatGPT
+- Unreal Engine
+- Udemy
+- Freesound
+- DatFont
+- GoogleFonts
+- Photopea
+- Freepics
+- Canva

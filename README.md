@@ -252,6 +252,10 @@ También se representan mediante Widgets Blueprints. Los objetivos son cadenas d
 Es un elemento de Widget Blueprint el cual intenta simular una pantalla de carga. Este se muestra cada vez que se inicia un nivel y sirve para impedir que el usuario pueda ver el nivel mientras carga la textura. Para indicar al jugador que el nivel está cargando y que no se ha quedado colgado el juego, se muestra una barra de progreso móvil y tres cadenas de texto con una animación de ir apareciendo y desapareciendo.
 
 ## Easter Eggs
+
+## Vídeo
+Se ha pedido realizar un vídeo mostrando la funcionalidad del videojuego. Para acceder a este haga clic en [este enlace](https://youtu.be/rkXzWT0f0Pw).
+
 ## Licencia
 Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.
 

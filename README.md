@@ -162,6 +162,77 @@ En relación al objetivo principal no existe un castigo por fallar al completar 
 
 Dentro de los minijuegos sí que existe castigo por colisionar con los proyectiles enemigos. En este caso se devuelve al personaje a la posición de inicio del nivel desde donde deberá volver a intentarlo.
 
+## Contenido
+A continuación se listan los elementos más relevantes del videojuego. Para ello se van a hacer distinción entre los diferentes elementos en función de los mapas donde puedan encontrarse.
+
+_Nota: No se van a incluir los blueprints desarrollados para crear elementos de teceros descargados los cuales venían separados en piezas y se debieron juntar en un único blueprint._
+
+### Contenido_clase
+#### Puertas
+Son los elementos de interacción que vinculan la escena del mapa del aula, con la escena del mapa de la fiesta. Esto lo realiza una vez se han cumplido los tres objetivos (invitar los tres personajes). La interacción con este elemento desencadena el primer diálogo con la madre que, a su vez, da lugar a la escena de la fiesta de cumpleaños.
+
+#### Personajes
+Estos son los alumnos de la clase y compañeros del protagonista. El protagonista tiene como objetivos invitarlos a su cumpleaños. Los personajes tienen cada uno una personalidad diferente. Al interactuar con ellos desencadenan un diálogo propio que a su vez da lugar a una escena de minijuego que debe ser completado para avanzar en la historia.
+
+#### Objetos curiosos
+Repartidos por el mapa hay zonas en forma de TriggerBox las cuales se encargan de mostrar por pantalla un mensaje con información sobre elementos que se encuentran cerca. Por ejemplo: título de libros, un comentario cómico o un teléfono de apoyo contra el acoso escolar.
+
+### Contenido_fiesta
+#### Elementos interactuables
+Toman la forma de TriggerBox dentro del mapa. A través de esto se desarrolla la interacción que da lugar a los diálogos que muestran escenas pasadas vividas por el protagonista de la historia para dar mayor profundidad a la narrativa. Estas escenas incluyen diversos personajes pero no presentan ningún minijuego que superar.
+
+Estos elementos muestran un mensaje a través de la interfaz de usuario cuando se acerca a los elementos de los pastelitos, la tarta y los globos de "Happy Birthday" en el mapa de la fiesta de cumpleaños.
+
+#### Paredes invisibles
+Su nombre es autoexplicativo. Son elementos que se han visto necesarios para limitar el movimiento del jugador dentro de la escena de la fiesta. Estan formados por elementos de tipo Box escalados cuya visibilidad será desactivada dentro del blueprint del nivel.
+
+#### Ventanas
+Posicionadas tras los globos de "Happy Birthday" es uno de los elementos utilizados para mostrar el paso del tiempo. En sus blueprints se crearon una funciones para modificar la intensidad de la luz emitida intentando simular la luz natural. A su vez, tiene un panel con un material color azul marino oscuro bastante especular, el cual sirve para simular el reflejo de la luz por el interior de una ventana cuando la calle está oscura. De esta forma, se pretende simular que va cayendo la tarde y acaba siendo de noche.
+
+_El paso del tiempo se da cada vez que el jugador interactúa con uno de los objetos y completa el diálogo asociado a ellos._
+
+#### Reloj de pared
+Es otro de los elementos que pretenden simular el paso del tiempo. Este actualiza su posición rotando 30 grados cada vez que pasa el tiempo. De esta forma va marcando diferentes horas indicando que el tiempo ha pasado mientras el protagonista recordaba esos momentos.
+
+_El paso del tiempo se da cada vez que el jugador interactúa con uno de los objetos y completa el diálogo asociado a ellos._
+
+### Minijuegos
+
+#### Plataformas [1-7]
+Son plataformas sobre las cual deberá saltar el jugador hasta llegar al objetivo.
+
+#### Plataforma 8
+Es una plataforma como las anteriores con la peculiaridad que estas se mueven de forma lineal. Al chocar contra un elemento de pared invisible para plataforma móvil, cambian su el sentido de su dirección. De esta forma, se crea un movimiento lateral de izquierda a derecha y viceversa.
+
+#### Pared para rebotar
+Es un tipo de pared invisible especial la cual toma como variable dos plataformas 8. Al colisionar con estas cambia el sentido de sus direcciones.
+
+#### Tarjeta de invitación
+Se trata del elemento recogible que debe tomar el jugador para invitar al compañero a su cumpleaños. Esta tarjeta debe llevarla al fantasma que representa la meta del nivel. Cuanto este elemento es recogido se escucha unos arcordes que pertenecen a la melodía de "Cumpleaños Feliz".
+
+#### Meta
+Se trata del objetivo final del nivel de minijuego y toma la forma de un fantasma representando así el miedo del protagonista hacia sus compañeros de clase. El jugador deberá colisionar con este cuando haya conseguido la Tarjetta de invitación. 
+
+#### Insulto
+Son los proyectiles que debe esquivar el jugador cuando existan en el nivel. La colisión con estos reproduce un pitido de censura y llevan al jugador a la posición de inicio del minijuego.
+
+### Interfaz de Usuario
+#### Diálogos
+Se representan mediante Widgets Blueprints y el diálogo es almacenado en Data Tables vinculadas a una estructura de datos que se define como:
+- Enum de nombre de personajes
+- Fondo del dialogo
+- Sprite a la derecha
+- Sprite a la izquierda
+- Enum de propiedades (para indicar si está hablando un personaje u otro).
+_Para indicar si un personaje habla o no, se juega con la opacidad del sprite que lo representa. También es posible no mostrar uno o ambos sprites_.
+
+#### Objetivos
+También se representan mediante Widgets Blueprints. Los objetivos son cadenas de textos predefinidas que cambian su opacidad cuando han sido completadas o cuando deben aparecer.
+
+#### Pantallas de carga
+Es un elemento de Widget Blueprint el cual intenta simular una pantalla de carga. Este se muestra cada vez que se inicia un nivel y sirve para impedir que el usuario pueda ver el nivel mientras carga la textura. Para indicar al jugador que el nivel está cargando y que no se ha quedado colgado el juego, se muestra una barra de progreso móvil y tres cadenas de texto con una animación de ir apareciendo y desapareciendo.
+
+## Easter Eggs
 ## Licencia
 Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.
 

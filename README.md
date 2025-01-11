@@ -26,6 +26,22 @@ Es por ello que, finalmente, se incluyen los siguientes elementos claves para el
 - En el mapa de **la clase** se encontrarán algunos **estudiantes**. Al interactuar con estos **se abrirá el diálogo** para invitarlos a la fiesta de cumpleaños. Será esta invitación la que desencadenará el evento del **minijuego**.
 - En el mapa de **la fiesta de cumpleaños** se encontrará ciertos elementoss de fiesta. Al interactar con estos **se abirá el diálogo** de recuuerdos pasados en los que reflejarán que el alumno está siendo víctima de acoso escolar. Además, el entorno debe reflejar **el paso del tiempo** cuando se completan estos diálogos.
 
+## Diseño
+El diseño tiene las siguientes secciones:
+### TODO ÍNDICE DE LAS SECCIONES DE DISEÑO
+
+### Estética
+Como bien se ha comentado en puntos anteriores, se va a poner especial enfásis en la estética de los mapas del aula del colegio y de la fiesta de cumpleaños.
+
+Para el **aula del colegio** se utilizarán, a parte de recursos habituales como pupitres, perchas, libros y pizarras, decoraciones en las paredes. Es habitual ver en los centros educativos, gran infinidad de dibujos, murales y pósters pegados en las paredes dotando de vida las aulas y los entornos de alrededor. También se cree recomendable incluir un pasillo, para dotar de mayor espacio y hacer ver que es un edificio grande. Se utilizará un paisaje falso mediante imágenes para mostrar por las ventanas.
+
+Para la **fiesta de cumpleaños** se utilizará elementos decorativos para diseñar la casa y a esta decoración de interior se le agregarán elementos de una fiesta de cumpleaños como tartas, bocadillos, patatas fritas y globos. A su vez, como se ha indicado en el apartado anterior, se debe reflejar el paso del tiempo por lo que se deberá contar con elementos de ventanas que iluminen o no la instancia para reflejar este cambio de horas.
+
+A su vez, para la **interfaz de usuario** se quiere recalcar que es un trabajo educativo y que tiene gran importancia el ámbito escolar en él por lo que los botones y demás elementos se reflejarán con herramientas dentro del entorno escolar como pizarras, libretas, notas, etc. Para la tipografía, se utilizarán aquellas con un estilo de escritura a mano o de tiza.
+
+Se intentará dar dinamismo a través de los sonidos. Por ello se incluirán elementos sonoros como música o efectos que se adecúen a las escenas mostradas.
+
+#### Gráficos
 
 ## Licencia
 Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.

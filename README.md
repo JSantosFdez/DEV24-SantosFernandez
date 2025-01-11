@@ -12,8 +12,11 @@ Para hacer uso de este proyecto, por limitación del tamaño permitido por GitHu
 
 ## Preproducción
 Para el desarrollo de este videojuego debíamos partir de una idea inicial a partir de la cual obtener los elementos claves que se querían incluir en el vídeojuego.
+
 Como ya se ha comentado, este videojuego parte de la motivación por desarrollar un proyecto que intente concienciar sobre el acoso escolar en las aulas. Por ello, se parte de a historia de Pablo Sanchis Serrano para desarrollar una narrativa basada en esta. Es por ello que se piensa en el desarrollo de un videojuego de diálogo narrativo que intente contar esta historia.
+
 Tras consultar con el profesorado y debatir la idea, se pone de manifiesto la existencia de ciertos minijuegos que se desarrollen a lo largo de la historia dado que un videojuego unicamente narrativo puede perder la atención de aquellos alumnos a los que no les guste la lectura.
+
 Es por ello que, finalmente, se incluyen los siguientes elementos claves para el desarrollo del juego:
 
 - El mundo se divide en **dos escenarios** principales. Uno estará basado en **un aula** de colegio. El otro estará basado en **una fiesta de cumpleaños**. Se pondrá especial immportancia en los detalles de decoración para hacer entender en qué tipo de entorno se encuentra el jugador. Es decir, el escenario de la clase debe parecer una clase y el escenario de la fiesta de cumpleaños debe parecer una celebración de cumpleaños en casa.

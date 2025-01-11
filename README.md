@@ -42,6 +42,84 @@ A su vez, para la **interfaz de usuario** se quiere recalcar que es un trabajo e
 Se intentará dar dinamismo a través de los sonidos. Por ello se incluirán elementos sonoros como música o efectos que se adecúen a las escenas mostradas.
 
 #### Gráficos
+Para los elementos gráficos se han utilizado diferentes fuentes para conseguir así la estética indicada en el apartado anterior.
+
+Los **assets** que dan lugar y forma a los diferentes mapas en los que se desarrolla nuestro videojuego se han utilizado fuentes de descarga gratuitas como son <a href="https://www.fab.com/">FAB</a> y  <a href="https://www.turbosquid.com/">TurboSquid</a>. 
+
+Además, para los recursos de **texturas e imágenes** se utilizaron otras fuentes de descargas de elementos PNG y JPG como son <a href="https://www.pngegg.com/">PNGEgg</a>, <a href="https://es.pngtree.com/">PNGTree</a> y <a href="https://www.freepik.es/">Freepick</a> así como búsquedas directas en <a href="https://www.google.com/imghp">Google Imágenes</a>. Algunas de estas imágenes eran editadas posteriormente mediante el uso de la herramienta online <a href="">Photopea</a>.
+
+Para los **sprites** de los personajes se utilizaron herramientas de creación de elementos mediante Inteligencia Artificial. Para esta se utilizó la herramienta <a href="https://openart.ai/home">OpenArt</a>.
+
+Para finalizar, las **fuenes** utilizadas fueron obtenidas de la plataforma de <a href="https://www.dafont.com/es/">dafont.com</a> así como de <a href="https://fonts.google.com/">Google Fonts</a>.
+
+Para comprobar los elementos y sus respectivas fuentes, se ofrece un listado de los recursos de terceros y las fuentes donde fueron descargados haciendo clic en <a href="https://docs.google.com/spreadsheets/d/105x5jadiWcKrHXqEFPZ0AK8x2Arj8u8JIHEGY2tgu6s/edit?usp=sharing">este enlace</a>.
+
+### Sonidos
+Como se comentaba previamente, se va a hacer uso de música y recursos sonoros para mejorar la inmersión de nuestro videojuego.
+
+Por un lado, el videojuego cuenta con música y con efectos de sonido. Todos los enlaces para conocer la obtención o creación de los elementos sonoros también se encuentran recogidos en el listado de recursos de tercero al que se puede acceder haciendo clic en <a href="https://docs.google.com/spreadsheets/d/105x5jadiWcKrHXqEFPZ0AK8x2Arj8u8JIHEGY2tgu6s/edit?usp=sharing">este enlace</a>.
+
+#### Efectos de sonido
+Los efectos de sonido han sido recogidos de fuentes gratuitas como son <a href="https://pixabay.com/sound-effects/">Pixabay</a>, <a href="https://freesound.org/">Freesound</a> y <a href="https://mixkit.co/free-sound-effects/">mixkit</a>.
+
+#### Música
+Toda la música incluida en el vidoejuego ha sido generada integramente por la herramienta de inteligencia artificial <a href="https://suno.com/">Suno</a> incluido el tema principal del videojuego.
+
+Para la letra de este se le pasó el siguiente argumento: _Créame la letra para una canción corta infantil para niños de 10-12 años que hablen de la historia en la que invitas con toda la ilusión a tus compañeros a casa por tu fiesta de cumpleaños y acabas quedándote solo porque ninguno viene y recordando cómo eres víctima de acoso escolar._ A la herramienta de iinteligencia artificial <a href="https://chatgpt.com">ChatGPT</a>.
+
+El resultado obtenido es el siguiente:
+
+_**Verso 1**
+Hoy es mi día, qué ilusión,
+colgué globos en mi balcón.
+Invité a todos, ¡qué felicidad!,
+una fiesta llena de amistad._
+
+_El pastel espera en la mesa,
+mi sonrisa brilla con sorpresa.
+Pero el reloj sigue sin parar,
+y nadie, nadie quiere llegar._
+
+_**Coro**
+¿Por qué me siento tan pequeño aquí?
+¿Por qué me cuesta tanto sonreír?
+Quiero un abrazo, alguien que esté,
+pero solo el silencio vino a mi fiesta esta vez._
+
+_**Verso 2**
+En el colegio dicen que soy raro,
+que mi mundo es siempre muy callado.
+No entienden mis juegos, mi forma de hablar,
+y a veces me duele tanto aguantar._
+
+_Intento ser fuerte, pero es difícil,
+soñar despierto me hace invencible.
+Aunque hoy mi corazón se rompió,
+prometo que no estoy solo, no._
+
+_**Coro**
+¿Por qué me siento tan pequeño aquí?
+¿Por qué me cuesta tanto sonreír?
+Quiero un abrazo, alguien que esté,
+pero solo el silencio vino a mi fiesta esta vez._
+
+_**Puente**
+Mamá dice que soy especial,
+papá me recuerda que todo va a cambiar.
+Hay alguien allá afuera que me entenderá,
+y juntos crearemos una amistad._
+
+_**Coro Final**
+Aunque me sienta tan pequeño aquí,
+en mi corazón sé que puedo seguir.
+Construiré un mundo donde pueda estar,
+con amigos de verdad, que sepan amar._
+
+_**Outro**
+Hoy aprendí que soy valiente,
+y aunque duela, seguiré adelante.
+Mi luz brillará, nadie la apagará,
+porque sé que algún día todo cambiará._
 
 ## Licencia
 Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.

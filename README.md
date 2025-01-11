@@ -10,6 +10,10 @@ Los avances de este proyecto se pueden seguir a través de las diferentes redes 
 ## Instalación y uso
 Para hacer uso de este proyecto, por limitación del tamaño permitido por GitHub, todo el material adicional necesario a los recursos subidos en este repositorio se encuentran disponibles a través de la carpeta que se encuentra disponible a través de <a href="https://drive.google.com/drive/folders/1C3Ct_3gzNXF72ZuOEt142ZIjtlSwBu56?usp=sharing">este enlace</a>. El contenido debe descomprimirse y pegarse en la carpeta "Content" del proyecto.
 
+## Licencia
+Jesús Santos Fernández, autor de la documentación, código y recursos de este trabajo, concedo permiso permanente a los profesores de la Facultad de Informática de la Universidad Complutense de Madrid para utilizar este material, con sus comentarios y evaluaciones, con fines educativos o de investigación; ya sea para obtener datos agregados de forma anónima como para utilizarlo total o parcialmente reconociendo expresamente nuestra autoría.
+
+Una vez superada con éxito la asignatura se prevee publicar todo en abierto (la documentación con licencia Creative Commons Attribution 4.0 International (CC BY 4.0) y el código con licencia GNU Lesser General Public License 3.0).
 
 ## Referencias
 - Conectado

@@ -242,7 +242,7 @@ Se representan mediante Widgets Blueprints y el diálogo es almacenado en Data T
 - Sprite a la derecha
 - Sprite a la izquierda
 - Enum de propiedades (para indicar si está hablando un personaje u otro).
-- 
+  
 _Para indicar si un personaje habla o no, se juega con la opacidad del sprite que lo representa. También es posible no mostrar uno o ambos sprites_.
 
 #### Objetivos
@@ -251,6 +251,85 @@ También se representan mediante Widgets Blueprints. Los objetivos son cadenas d
 #### Pantallas de carga
 Es un elemento de Widget Blueprint el cual intenta simular una pantalla de carga. Este se muestra cada vez que se inicia un nivel y sirve para impedir que el usuario pueda ver el nivel mientras carga la textura. Para indicar al jugador que el nivel está cargando y que no se ha quedado colgado el juego, se muestra una barra de progreso móvil y tres cadenas de texto con una animación de ir apareciendo y desapareciendo.
 
+## Topología
+A continuación, se muestra la topología de las diferentes zonas del videojuego.
+
+### Mapa de Clase
+El juego comienza en este nivel. Para superarlo debe ir hablando en orden con los compañeros de clase. Primero debe hablar con Juanito, completar su minijuego y terminar la conversación. Tras este debe hablar con Pedro, completar su minijuego y terminar la conversación. Por último debe hablar con Miguel, superar su minijuego y terminar la conversación. De esta forma podrá salir por la puerta, completando este nivel.
+
+```mermaid
+graph LR;
+    spawn[Spawn en la clase]-->hablarJ[Juanito, Diálogo con Juanito];
+    hablarJ[Juanito, Diálogo con Juanito]-->minijuego1[Minijuego 1];
+    minijuego1[Minijuego 1]-->hablarJ[Juanito, Diálogo con Juanito];
+    hablarJ[Juanito, Diálogo con Juanito]-->spawn[Spawn en la clase];
+    spawn[Spawn en la clase]-->hablarP[Pedro, Diálogo con Pedro];
+    hablarP[Pedro, Diálogo con Pedro]-->minijuego2[Minijuego 2];
+    minijuego2[Minijuego 2]-->hablarP[Pedro, Diálogo con Pedro];
+    hablarP[Pedro, Diálogo con Pedro]-->spawn[Spawn en la clase];
+    spawn[Spawn en la clase]-->hablarM[Miguel, Diálogo con Miguel];
+    hablarM[Miguel, Diálogo con Miguel]-->minijuego3[Minijuego 3];
+    minijuego3[Minijuego 3]-->hablarM[Miguel, Diálogo con Miguel];
+    hablarM[Miguel, Diálogo con Miguel]-->spawn[Spawn en la clase];
+    spawn[Spawn en la clase]-->interactuar[Diccionarios/Libros/Póster, Mensaje de información];
+    spawn[Spawn en la clase]-->salir[Puerta, Salir de clase];
+```
+### Mapa de fiesta
+Este mapa comienza con el diálogo con la madre. Tras esto apareces en la casa y puedes interactuar con los objetos de pastel, tarta y globos para desencadenar el diálogo con los diferentes personajes.
+
+```mermaid
+graph LR;
+    dialogoM1[Mamá, Primer Diálogo]-->spawn[Spawn en la casa];
+    spawn[Spawn en la casa]--> intPastelitos[Pastelitos, Diálogo Juanito - Pasado];
+    intPastelitos[Pastel, Diálogo Juanito - Pasado] --> spawn[Spawn en la casa];
+    spawn[Spawn en la casa]--> intTarta[Tarta, Diálogo clase - Pasado];
+    intTarta[Tarta, Diálogo clase - Pasado] --> spawn[Spawn en la casa];
+    spawn[Spawn en la casa]--> intGlobos[Globos, Diálogo Miguel - Pasado];
+    intGlobos[Globos, Diálogo Miguel - Pasado] --> spawn[Spawn en la casa];
+    spawn[Spawn en la casa]--> dialogoM2[Mamá, Diálogo final];
+```
+
+### Minijuego 1
+En este primer mapa de minijuego debes ir saltando sobre las plataformas para agarrar la invitación de cumpleaños y entregarsela al fantasma.
+```mermaid
+graph LR;
+    spawn[Spawn, Posición inicial]-->borrador[Borrador];
+    borrador[Borrador]--> tizas[Tizas];
+    tizas[Tizas] --> clip[Clip];
+    clip[Clip]--> sobre[Invitación];
+    sobre[Invitación] --> spawn[Spawn, Posición inicial];
+    tizas[Tizas] --> goma[Goma];
+    goma[Goma] --> libreta[Libreta];
+    libreta[Libreta]--> fantasma[Fantasma, meta];
+```
+
+### Minijuego 2
+En este segundo mapa de minijuego debes ir saltando sobre las diferentes plataformas evitando ser golpeado por los proyectiles enemigos, para agarrar la invitación de cumpleaños y entregarsela al fantasma.
+```mermaid
+graph LR;
+    spawn[Spawn, Posición inicial]-->libreta[Libreta];
+    libreta[Libreta]--> libros[Libros];
+    libros[Libros] --> tizaA[Tiza Azul];
+    tizaA[Tiza Azul]--> tizaR[Tiza Roja];
+    tizaR[Tiza Roja] --> sobre[Invitación];
+    sobre[Invitación] --> tizaR[Tiza Roja];
+    tizaA[Tiza Azul] --> tizaB[Tiza Blanca];
+    tizaR[Tiza Roja] --> tizaA[Tiza Azul];
+    tizaB[Tiza Blanca]--> fantasma[Fantasma, meta];
+```
+
+### Minijuego 2
+En este tercer mapa de minijuego debes escalar con la ayuda de las plataformas móviles evitando ser golpeado por los proyectiles enemigos, para agarrar la invitación de cumpleaños y entregarsela al fantasma.
+
+```mermaid
+graph LR;
+    spawn[Spawn, Posición inicial]-->tizaV[Tiza Verde];
+    tizaV[Tiza Verde] --> clip[Clip];
+    clip[Clip] --> Borrador[Borrador];
+    tizaA[Tiza Azul]--> Libreta[Libreta];
+    Borrador[Borrador] --> tizaA[Tiza Azul];
+    Libreta[Libreta] --> fantasma[Fantasma, meta];
+```
 ## Easter Eggs
 
 ## Vídeo

@@ -318,7 +318,7 @@ graph LR;
     tizaB[Tiza Blanca]--> fantasma[Fantasma, meta];
 ```
 
-### Minijuego 2
+### Minijuego 3
 En este tercer mapa de minijuego debes escalar con la ayuda de las plataformas móviles evitando ser golpeado por los proyectiles enemigos, para agarrar la invitación de cumpleaños y entregarsela al fantasma.
 
 ```mermaid
@@ -330,6 +330,104 @@ graph LR;
     Borrador[Borrador] --> tizaA[Tiza Azul];
     Libreta[Libreta] --> fantasma[Fantasma, meta];
 ```
+
+## Producción
+Las tareas se fueron desarrollando poco a poco en función del tiempo disponible por el alumno. 
+| Estado  |  Tarea  |  Fecha  |  
+|:-:|:--|:-:|
+| ✔ | Diseño: Mapa de pruebas | 23-12-2024 |
+| ✔ | Diseño: Assets de la clase | 24-12-2024 |
+| ✔ | Diseño: Mapa de la clase | 27-12-20214 |
+| ✔ | Diseño: Mapa de la casa | 30-12-2024 |
+| ✔ | Diseño: Decoración cumpleaños | 2-01-2025 |
+| ✔ | Diseño: Sonido y música de la casa y la clase | 2-01-2025 |
+| ✔ | Diseño: Diseño primer minijuego | 4-01-2025 |
+| ✔ | Mecánima: Funcionamiento de minijuegos 1, 2 y 3 | 4-01-2025 |
+| ✔ | Diseño: Personajes | 5-01-2025 |
+| ✔ | Mecánica: Animaciones de los personajes | 5-01-2025 |
+| ✔ | Diseño: Diálogos | 7-01-2025 |
+| ✔ | Mecánica: Funcionamiento diálogo personaje 1 | 7-01-2025 |
+| ✔ | Mecánica: Funcionamiento diálogo personajes 2 y 3 y madre | 8-01-2025 |
+| ✔ | Mecánica: Conexión entre la clase y la casa | 8-01-2025 |
+| ✔ | Mecánica: Funcionamiento diálogos de la casa | 9-01-2025 |
+| ✔ | Diseño: Menú | 9-01-2025 |
+| ✔ | Mecánica: Botones del menú | 9-01-2025 |
+| ✔ | Mecánica: Lista de objetivos | 9-01-2025 |
+| ✔ | Diseño: Mensaje de inicio de juego | 10-01-2025 |
+| ✔ | Diseño: Pantalla de carga | 10-01-2025 |
+| ✔ | Empaquetado | 10-01-2025 |
+
+
+<b></b>
+Como lista de mecánicas implementadas podría expresarse así:
+- [x] Mecánica: Diálogos de los personajes
+- [x] Mecánica: Mostrar diálogos letra a letra
+- [x] Mecánica: Invitación de cumpleaños (minijuego)
+- [x] Mecánica: Meta (minijuego)
+- [x] Mecánica: Cambio de mapa (clase con casa)
+- [x] Mecánica: Plataformas móviles (minijuego)
+- [x] Mecánica: Insultos móviles (minijuego)
+- [x] Mecánica: Ventanas temporales (paso del tiempo)
+- [x] Mecánica: Reloj temporal (paso del tiempo)
+- [x] Mecánica: Trofeo que da la victoria al jugador y muestra los créditos
+
+
+<b></b>
+Las **clases principales** que se han desarrollados son las siguientes:
+```mermaid
+classDiagram
+      Actor <|-- Pawn
+      Pawn <|-- Character
+      Character <|-- BP_SideScrollerCharacter
+      Character <|-- BP_Victor
+      Character <|-- BP_Juanito
+      Character <|-- BP_Pedro
+      Character <|-- BP_Miguel
+      Actor <|-- BP_ClassroomDoorCollision
+      Actor <|-- BP_ParedInvisible
+      Actor <|-- BP_WindowA
+      Actor <|-- BP_WallClock
+      Actor <|-- BP_Portrait
+      Actor <|-- BP_Book1
+      Actor <|-- BP_PlatformX
+      Actor <|-- BP_Insult
+      Actor <|-- BP_GoalX
+      Actor <|-- BP_HBCard
+```
+
+
+<b></b>
+Por problemas con los assets importados, en ocasiones ha sido necesario crear **materiales** a partir de las texturas obtenidas en las descargas de estos. No se toman como relevantes los materiales generados a través de imágenes para las decoraciones como los pósters o las fotografías. No obstante, se han creado algunos materiales como:
+```mermaid
+classDiagram
+      Material <|-- M_ScreenRefl
+     Material <|-- BlackNight
+```
+
+
+<b></b>
+Por último, se han desarrollado una serie de **widgets** tanto para el menú, como para las transiciones de zona y los diálogos. Serían los documentados a continuación:
+```mermaid
+classDiagram
+      Widget Blueprint <|-- W_D_1_Classroom
+      Widget Blueprint <|-- W_D_1_Juanito
+      Widget Blueprint <|-- W_D_1_Miguel
+      Widget Blueprint <|-- W_D_1_Mom
+      Widget Blueprint <|-- W_D_1_Pedro
+      Widget Blueprint <|-- W_D_2_Juanito
+      Widget Blueprint <|-- W_D_2_Miguel
+      Widget Blueprint <|-- W_D_2_Mom
+      Widget Blueprint <|-- WB_ClassRoomWidget
+      Widget Blueprint <|-- WB_LoadingScreen
+      Widget Blueprint <|-- WB_MainMenu
+      Widget Blueprint <|-- WB_MainMenu_Creditos
+      Widget Blueprint <|-- WB_Minigame
+      Widget Blueprint <|-- WB_ObjetivesClassRoom
+      Widget Blueprint <|-- WB_ObjetivesHome
+      Widget Blueprint <|-- WB_RealStory
+```
+
+
 ## Easter Eggs
 
 ## Vídeo

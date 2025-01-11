@@ -28,7 +28,23 @@ Es por ello que, finalmente, se incluyen los siguientes elementos claves para el
 
 ## Diseño
 El diseño tiene las siguientes secciones:
-### TODO ÍNDICE DE LAS SECCIONES DE DISEÑO
+- [Diseño preliminar](#diseño-preliminar)
+  - [Escenario clase](#escenario-clase)
+  - [Escenario fiesta](#escenario-fiesta)
+  - [Escenario minijuego](#escenario-minijuego)
+  - [Interfaz diálogo clase](#interfaz-diálogo-clase)
+  - [Interfaz diálogo fiesta](#interfaz-diálogo-fiesta)
+- [Estética](#estética)
+  - [Gráficos](#gráficos)
+  - [Sonidos](#sonidos)
+    - [Efectos de sonido](#efectos-de-sonido)
+    - [Música](#música)
+- [Dinámica](#dinámica)
+  - [Objetivo](#objetivo)
+    - [Objetivos clase](#objetivos-clase)
+    - [Objetivos minijuego](#objetivos-minijuego)
+    - [Objetivos fiesta](#objetivos-fiesta)
+  - [Castigo](#castigo)
 
 ### Diseño preliminar
 A continuación, se muestra el diseño inicial de los diferentes mapas e interfaces del juego.
@@ -72,15 +88,15 @@ Para finalizar, las **fuenes** utilizadas fueron obtenidas de la plataforma de <
 
 Para comprobar los elementos y sus respectivas fuentes, se ofrece un listado de los recursos de terceros y las fuentes donde fueron descargados haciendo clic en <a href="https://docs.google.com/spreadsheets/d/105x5jadiWcKrHXqEFPZ0AK8x2Arj8u8JIHEGY2tgu6s/edit?usp=sharing">este enlace</a>.
 
-### Sonidos
+#### Sonidos
 Como se comentaba previamente, se va a hacer uso de música y recursos sonoros para mejorar la inmersión de nuestro videojuego.
 
 Por un lado, el videojuego cuenta con música y con efectos de sonido. Todos los enlaces para conocer la obtención o creación de los elementos sonoros también se encuentran recogidos en el listado de recursos de tercero al que se puede acceder haciendo clic en <a href="https://docs.google.com/spreadsheets/d/105x5jadiWcKrHXqEFPZ0AK8x2Arj8u8JIHEGY2tgu6s/edit?usp=sharing">este enlace</a>.
 
-#### Efectos de sonido
+##### Efectos de sonido
 Los efectos de sonido han sido recogidos de fuentes gratuitas como son <a href="https://pixabay.com/sound-effects/">Pixabay</a>, <a href="https://freesound.org/">Freesound</a> y <a href="https://mixkit.co/free-sound-effects/">mixkit</a>.
 
-#### Música
+##### Música
 Toda la música incluida en el vidoejuego ha sido generada integramente por la herramienta de inteligencia artificial <a href="https://suno.com/">Suno</a> incluido el tema principal del videojuego.
 
 Para la letra de este se le pasó el siguiente argumento: _Créame la letra para una canción corta infantil para niños de 10-12 años que hablen de la historia en la que invitas con toda la ilusión a tus compañeros a casa por tu fiesta de cumpleaños y acabas quedándote solo porque ninguno viene y recordando cómo eres víctima de acoso escolar._ A la herramienta de iinteligencia artificial <a href="https://chatgpt.com">ChatGPT</a>.
@@ -427,8 +443,24 @@ classDiagram
       Widget Blueprint <|-- WB_RealStory
 ```
 
+## Posproducción
+Tras haber pulido el juego lo máximo posible y habiendo corregido todos los errores encontrados se ha empaquetado el juego. Este, a su vez, ha sido subido a la plataforma de itch.io desde donde podrá ser descargado de forma gratuita a través de [este enlace](https://jesus-santos.itch.io/vichoraro-demo).
+
+Para complementarlo, como lo que se quiere es que este sirva como herramienta docente para tratar aspectos relacionados con el acoso escolar, aunques sea un prototipo, se ha creado una pequeña guía docente con algunas actividades para tratar estos temas a la cual se puede acceder a través de [este link](https://drive.google.com/file/d/16jMQHb-jsimUMNK_BrzBilsG9PDAPS2M/view?usp=drive_link).
+
+Además, se pretende dar difusión de este prototipo para que a su vez sirva para dar difusión al Trabajo de Fin de Máster que se pretende realizar. Para ello, se está hablando de este prototipo a través de las redes sociales del alumno, a las cuales se pueden acceder a través de [este otro enlace de LinkTree](https://linktr.ee/vichoraro).
+
+De igual forma, se intentará contactar con el programa [Conexión Extremadura](http://www.canalextremadura.es/programas/conexion-extremadura) de [Canal Extremadura](http://www.canalextremadura.es/) por si estarían dispuestos a darle difusión a este proyecto.
 
 ## Easter Eggs
+Dentro del juego hay algunos pequeños easter eggs y referencias que seguramente pasen desapercibidos para la mayoría de jugadores. Aún así, los voy a listar aquí.
+
+- Referencias a mis referentes principales: "Recuerda Aquella Vez" de Adam Silvera y Mike Lightwook.
+- Referencias a nuestros referentes del proyecto: "Invisible" de Eloy Moreno (y su adaptación a la televisión por Paco Caballero e "Invisible" de R. J. Palacio.
+- Referencia a mi yo de 12 años que decidió hacer de su lucha una motivación y me trajo hasta donde estoy hoy día.
+- Referencia a quienes ayudaron a ese yo de 12 años y que me dieron un lugar donde sentirme seguro y querido.
+
+No voy a decir dónde se encuentran estos easter-eggs por si alguien quiere entretenerse buscándolos. 
 
 ## Vídeo
 Se ha pedido realizar un vídeo mostrando la funcionalidad del videojuego. Para acceder a este haga clic en [este enlace](https://youtu.be/rkXzWT0f0Pw).
@@ -458,3 +490,7 @@ Una vez superada con éxito la asignatura se prevee publicar todo en abierto (la
 - Photopea
 - Freepics
 - Canva
+- itch.io
+- LinkTree
+- Conexión Extremadura
+- Canal Extremadura

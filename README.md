@@ -224,6 +224,7 @@ Se representan mediante Widgets Blueprints y el diálogo es almacenado en Data T
 - Sprite a la derecha
 - Sprite a la izquierda
 - Enum de propiedades (para indicar si está hablando un personaje u otro).
+- 
 _Para indicar si un personaje habla o no, se juega con la opacidad del sprite que lo representa. También es posible no mostrar uno o ambos sprites_.
 
 #### Objetivos

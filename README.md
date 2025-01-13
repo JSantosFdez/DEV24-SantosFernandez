@@ -2,7 +2,7 @@
 Esta práctica consiste en la práctica final de la asignatura de Diseño de Videojuegos para el Máster de Ingeniería Informática en la Universidad de Extremadura.
 
 Para el desarrollo de esta práctica se ha utiliza la última versión ofrecida por el motor de Unreal Engine 5 siendo esta la versión 5.5.1.
-Esta práctica se ha implementado partiendo de la plantilla de FirstPersonTemplate ofrecida por el motor de Unreal Engine 5.
+Esta práctica se ha implementado partiendo de la plantilla de _Third Person Template_ ofrecida por el motor de Unreal Engine 5.
 
 "Vicho Raro Demo" surge como prototipo al Trabajo de Fin de Máster del estudiante Jesús Santos Fernández. Este proyecto consiste en el desarrollo de un videojuego como herramienta docente para concienciar y combatir el acoso escolar en las aulas de tercer ciclo de la educación primaria española.
 Los avances de este proyecto se pueden seguir a través de las diferentes redes sociales del estudiante enlazadas en a través de <a href="https://linktr.ee/vichoraro"> este link</a>.
@@ -26,6 +26,14 @@ Es por ello que, finalmente, se incluyen los siguientes elementos claves para el
 - En el mapa de **la clase** se encontrarán algunos **estudiantes**. Al interactuar con estos **se abrirá el diálogo** para invitarlos a la fiesta de cumpleaños. Será esta invitación la que desencadenará el evento del **minijuego**.
 - En el mapa de **la fiesta de cumpleaños** se encontrará ciertos elementoss de fiesta. Al interactar con estos **se abirá el diálogo** de recuuerdos pasados en los que reflejarán que el alumno está siendo víctima de acoso escolar. Además, el entorno debe reflejar **el paso del tiempo** cuando se completan estos diálogos.
 
+### Requisitos
+Para cumplir con los elementos previamente comentados se establecen los siguientes requisitos.
+- A. Es el día de tu cumpleaños y estás después de última hora tras haber finaliado las clases. Es el momento perfecto para invitar a tus compañeros a tu fiesta de cumpleaños y has decidido invitarlos a todos. Ahora mismo sólo te quedan por invitar tres personas. Las has dejado para el final porque no te sientes seguro con ellas pero aún así vas a hacer un esfuerzo y vas a intentar superar ese miedo que te está frenando. Partiendo de la plantilla de _Third Person Template_ te encuentras con el personaje en una instancia abierta que simula un **aula** de colegio. En ella se ecuentran tus **tres compañeros** a los que debes con los que debes **interactuar para invitarlos** a tu fiesta de cumpleaños. Tras invitarlos, vuelves a casa donde te encuentras con la **decoración de cumpleaños** con las que debes **interactuar** para seguir descubriendo la historia sobre tu relación con los demás personajes.
+- B. Entre los diálogos que se abren para invitar a tus compañeros de clases debe aparecer **un minijuego por cada invitación**. De forma similar a la **práctica 2**, estos minijuegos cuentan con una **cámara fija** perpendicular al plano sobre el que se está jugando. Además, en estos minijuegos, el jugador se **controla de forma específica** siendo que los únicos movimientos permitidos son: **izquierda, tecla direccional izquierda**, **derecha, tecla direccional derecha**, **salto, tecla direccional arriba**.
+- C. Basándonos en la **práctica 1**, los diferentes minijuegos deben consisitir en **niveles de plataformas** sencillos. Estos deben ir escalando su dificultad en función del orden de los diálogos e introduciendo elementos nuevos. Al igual que en la práctica mencionada, alguno de los minijuegos debe incuir, aparte de las plataformas báscias: **proyectiles** que al colisionar con el jugador le hacen perder el progreso en el nivel y **plataformas móviles** sobre las que el jugador deberá subir para avanzar por el nivel.
+- D. Para invitar a tus compañeros se debe crear un **diálogo** en el cual se refleje esta conversación. Este diálogo se reflará de forma visual usando los elementos de **Blueprint Widgets**. Los diálogos deben incluir **al menos dos personajes** mostrando: **el sprite de los interlocutores**, **el diálogo**, **el nombre de la persona que esta hablando**. Como funcionalidad adicional se puede reflejar a través del sprite, el interlocutor que se encuentra hablando (iluminándolo, oscureciéndolo, rodeándolo, jugando con la opacidad...).
+- E. Los **minijuegos** para la invitación de tus compañeros deben formar parte del diálogo siendo que estos **no deben aparecer ni antes, ni después** de completar el diálogo si no **entre medias de este**. Para ello se debe gestionar el diálogo para que **continúe la conversación** tras completar el minijuego. (Para facilitar la gestión de los diálogos se recomienda trabajas con ellos con niveles independientes teniendo en cuenta que esto supone un empeoramiento en el tamaño y carga de elementos).
+  
 ## Diseño
 El diseño tiene las siguientes secciones:
 - [Diseño preliminar](#diseño-preliminar)
@@ -422,7 +430,7 @@ classDiagram
 
 
 <b></b>
-Por último, se han desarrollado una serie de **widgets** tanto para el menú, como para las transiciones de zona y los diálogos. Serían los documentados a continuación:
+También, se han desarrollado una serie de **widgets** tanto para el menú, como para las transiciones de zona y los diálogos. Serían los documentados a continuación:
 ```mermaid
 classDiagram
       Widget Blueprint <|-- W_D_1_Classroom
@@ -441,8 +449,17 @@ classDiagram
       Widget Blueprint <|-- WB_ObjetivesClassRoom
       Widget Blueprint <|-- WB_ObjetivesHome
       Widget Blueprint <|-- WB_RealStory
+      Widget Blueprint <|-- WB_Minigame
 ```
 
+
+<b></b>
+Por último, para gestionar el movimiento de los personajes tanto en los escenarios abiertos como en los minijuegos, se ha trabajado con dos GameMode diferentes:
+```mermaid
+classDiagram
+      GameMode <|-- BP_VichoRaroGameMode
+      GameMode <|-- GM_SideScrollerGameMode
+```
 ## Posproducción
 Tras haber pulido el juego lo máximo posible y habiendo corregido todos los errores encontrados se ha empaquetado el juego. Este, a su vez, ha sido subido a la plataforma de itch.io desde donde podrá ser descargado de forma gratuita a través de [este enlace](https://jesus-santos.itch.io/vichoraro-demo).
 
@@ -451,6 +468,24 @@ Para complementarlo, como lo que se quiere es que este sirva como herramienta do
 Además, se pretende dar difusión de este prototipo para que a su vez sirva para dar difusión al Trabajo de Fin de Máster que se pretende realizar. Para ello, se está hablando de este prototipo a través de las redes sociales del alumno, a las cuales se pueden acceder a través de [este otro enlace de LinkTree](https://linktr.ee/vichoraro).
 
 De igual forma, se intentará contactar con el programa [Conexión Extremadura](http://www.canalextremadura.es/programas/conexion-extremadura) de [Canal Extremadura](http://www.canalextremadura.es/) por si estarían dispuestos a darle difusión a este proyecto.
+
+### Diseño de postproducción
+A continuación, se van a mostrar el diseño final de los diferentes escenarios y elementos del juego.
+
+#### Escenario clase
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1328330041070977064/HighresScreenshot00004.png?ex=67864f40&is=6784fdc0&hm=4b63e721dac61035fd5f6a2f41a63d36682160940bedf6d9443380af755cf279&" alt="Imagen" style="height: 300px;">
+
+#### Escenario fiesta
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1328330041892802660/HighresScreenshot00005.png?ex=67864f41&is=6784fdc1&hm=83835751c2b79f0434ce2b8349e345f98294bb16ee93f0dab738e140ec6c8d13&" alt="Imagen" style="height: 300px;">
+
+#### Escenario minijuego
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1328330042584993802/HighresScreenshot00006.png?ex=67864f41&is=6784fdc1&hm=d725fb5e121d576bc0bec1c5095ae831162c31c43cd1455f53a8c9ad8151c148&" alt="Imagen" style="height: 300px;">
+
+#### Interfaz diálogo clase
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1328330040038920202/Captura_de_pantalla_2025-01-13_124728.png?ex=67864f40&is=6784fdc0&hm=e7c099c013be0077cb5fab0b392c063d6699d0cdcef7373b069095a0d3d7bcec&" alt="Imagen" style="height: 300px;">
+
+#### Interfaz diálogo fiesta
+<img src="https://cdn.discordapp.com/attachments/781482080063717396/1328330040492036173/Captura_de_pantalla_2025-01-13_124827.png?ex=67864f40&is=6784fdc0&hm=18cf98a1fe9011b87cedbbd51e7db707d3d036348078beb847bd657bddc6ef35&" alt="Imagen" style="height: 300px;">
 
 ## Easter Eggs
 Dentro del juego hay algunos pequeños easter eggs y referencias que seguramente pasen desapercibidos para la mayoría de jugadores. Aún así, los voy a listar aquí.
@@ -471,26 +506,27 @@ Jesús Santos Fernández, autor de la documentación, código y recursos de este
 Una vez superada con éxito la asignatura se prevee publicar todo en abierto (la documentación con licencia Creative Commons Attribution 4.0 International (CC BY 4.0) y el código con licencia GNU Lesser General Public License 3.0).
 
 ## Referencias
-- Conectado
-- El Viaje De Elisa
-- School Of Empathy
-- De Fobos y Deimos
-- Gylt
-- Happy
-- Arbax
-- Invisible
-- Wonder
-- SunoAI
-- ChatGPT
-- Unreal Engine
-- Udemy
-- Freesound
-- DatFont
-- GoogleFonts
-- Photopea
-- Freepics
-- Canva
-- itch.io
-- LinkTree
-- Conexión Extremadura
-- Canal Extremadura
+- e-UCM. Conectado, un videojuego para concienciar sobre el acoso y ciberacoso escolar [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.e-ucm.es/es/portfolio-item/conectado/](https://www.e-ucm.es/es/portfolio-item/conectado/)
+- Fundación Orange, Autismo Burgos y Gametopia Games. El viaje de Elisa [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.elviajedeelisa.es/](http://www.elviajedeelisa.es/)
+- eConfidence Project. eConfidence: Cambiando comportamientos a través de Serious Games [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.econfidence.eu/es/game-bullying](http://www.econfidence.eu/es/game-bullying)
+- Jokabide. De Fobos y Deimos [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.jokabide.com/de-fobos-y-deimos/](https://www.jokabide.com/de-fobos-y-deimos/)
+- Tequila Works. GYLT [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://tequilaworks.com/en/gylt/](https://tequilaworks.com/en/gylt/)
+- Kaneda Games. Happy 12-16 [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.kaneda-games.com/destacados/top_serious_es/happy-12-16-esp/](https://www.kaneda-games.com/destacados/top_serious_es/happy-12-16-esp/)
+- Proyecto ARBAX. School Bullying. The anti-bullying training site [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.schoolbullying.eu/es/](https://www.schoolbullying.eu/es/)
+- Moreno, Eloy. Invisible. Madrid: Nube de Tinta, 2018. ISBN 9788416588435.
+- Palacio, R.J. Wonder. Madrid: Nube de Tinta, 2012. ISBN 9788496735712.
+- Suno. Suno – AI Music Generator [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://suno.com/](https://suno.com/)
+- OpenAI. ChatGPT [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://chatgpt.com](https://chatgpt.com)
+- Epic Games. Unreal Engine 5 [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.unrealengine.com/es-ES/unreal-engine-5](https://www.unrealengine.com/es-ES/unreal-engine-5)
+- Domínguez, Sergio. Unreal Engine 5: Curso de Desarrollo con Blueprints. Udemy, diciembre de 2024. Disponible en: [https://www.udemy.com/course/unreal-engine-5-curso-de-desarrollo-con-blueprints/](https://www.udemy.com/course/unreal-engine-5-curso-de-desarrollo-con-blueprints/)
+- Freesound. Freesound [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://freesound.org/](https://freesound.org/)
+- DaFont. DaFont [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.dafont.com/es/](https://www.dafont.com/es/)
+- Google. Google Fonts [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://fonts.google.com/](https://fonts.google.com/)
+- Photopea. Photopea [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.photopea.com/](https://www.photopea.com/)
+- Freepik. Freepik [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.freepik.es/](https://www.freepik.es/)
+- Canva. Canva [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.canva.com/](https://www.canva.com/)
+- Itch.io. Itch.io [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://itch.io/](https://itch.io/)
+- Linktree. Linktree [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://linktr.ee/](https://linktr.ee/)
+- Canal Extremadura. Conexión Extremadura [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.canalextremadura.es/programas/conexion-extremadura](http://www.canalextremadura.es/programas/conexion-extremadura)
+- Canal Extremadura. Canal Extremadura [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.canalextremadura.es/](http://www.canalextremadura.es/)
+- Poly Maniac. Create a Visual Novel in UE5 from Scratch [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.youtube.com/playlist?list=PLZ7TG1knsKRPKba-uBN56FRAaMo7TVemT](https://www.youtube.com/playlist?list=PLZ7TG1knsKRPKba-uBN56FRAaMo7TVemT)

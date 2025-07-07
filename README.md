@@ -530,3 +530,12 @@ Una vez superada con éxito la asignatura se prevee publicar todo en abierto (la
 - Canal Extremadura. Conexión Extremadura [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.canalextremadura.es/programas/conexion-extremadura](http://www.canalextremadura.es/programas/conexion-extremadura)
 - Canal Extremadura. Canal Extremadura [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [http://www.canalextremadura.es/](http://www.canalextremadura.es/)
 - Poly Maniac. Create a Visual Novel in UE5 from Scratch [en línea]. [Fecha no especificada] [consulta: 13 de enero de 2025]. Disponible en: [https://www.youtube.com/playlist?list=PLZ7TG1knsKRPKba-uBN56FRAaMo7TVemT](https://www.youtube.com/playlist?list=PLZ7TG1knsKRPKba-uBN56FRAaMo7TVemT)
+
+<div>
+  <br>
+  <hr>
+  <br>
+</div>
+
+<p>
+<a href="https://github.com/JSantosFdez/DEV24-SantosFernandez">VICHO RARO DEMO</a> © 2025 by <a href="https://www.linkedin.com/in/jesus-santos-fernandez-73b624257/">Jesús Santos Fernández</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
